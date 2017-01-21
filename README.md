@@ -61,7 +61,7 @@ Explain what these tests test and why
 Give an example
 ```
 ## Why you tested your word counter the way you did?
-To test the  ``` WordCounter  ``` class I need a unit test that can test each of its public methods to ensure all the all the code works as it is intended to work. With my approach, I wrote the automated  tests as I wrote the program, as opposed to writing the tests after developing the program. This helped me define the acceptance criteria and allowed me to focus on the flow of the program.
+To test the  ``` WordCounter  ``` class I need a unit test that can test each of its public methods to ensure all the all the code works as it is intended to work. With my approach, I wrote the automated  tests as I wrote the program, as opposed to writing the tests after developing the program. This helped me define the acceptance criteria and allowed me to validate my code as I wrote it.This is my first time using JUnit in a professional context so I would apprciate  feedback on my approach.
 
 My workflow was as follows:
 * Add a test
@@ -71,7 +71,23 @@ My workflow was as follows:
 * Refactor code
 * Repeat
 
-Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that tes
+Each test case had a set of attributes, forcing me to think about each test would work as I wrote it.
+*  Test ID: 
+*  Description : 
+*  Prerequisites : 
+*  Expected Output : 
+*  Actual : 
+*  Status :
+
+As I wrote the  ``` WordCounter  ```  class I would write tests to validate any point in the code where I could use an ```Assert Method```  to validate an expected output.  So I'd write the test then focus soley on that test until it passed, breaking the program into smaller junks rather than one whole application. I could then incrementally build on passing tests  instead of constantly refactoring code leading to new bugs.Once your tests are passing is safer to refactor.
+
+So once I had covered all possible expected outputs I test all possible  ``` Exceptions  ```  that could be thrown. 
+
+
+. You'll write one failing test, and focus solely on that to get it passing. It forces you to think about smaller chunks of functionality at a time rather than the application as a whole, and you can then incrementally build on a passing test, rather than trying to tackle the bigger picture from the get-go, which will probably result in more bugs, and therefore a longer development time
+
+
+automated testing can help isolate the effects of your changes so that you know that it doesn't break the rest of that particular piece of code.
 
 ## Why you think your testing is sufficient for your code to be merged?
 To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
