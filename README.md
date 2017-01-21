@@ -74,7 +74,7 @@ Each test case had a set of attributes, forcing me to think about each test woul
 *  Actual : 
 *  Status :
 
-As I wrote the  ``` WordCounter  ```  class I would write tests to validate any point in the code where I could use an ```Assert Method```  to validate an expected output.  So I'd write the test then focus soley on that test until it passed, breaking the program into smaller junks rather than one whole application. I could then incrementally build on passing tests  instead of constantly refactoring code leading to new bugs.Once your tests are passing is safer to refactor.
+As I wrote the  ``` WordCounter  ```  class I would write tests to validate any point in the code where I could use an ```Assert Method```  to validate an expected output.  So I'd write the test then focus soley on that test until it passed, breaking the program into smaller junks rather than one whole application. I could then incrementally build on passing tests  instead of constantly refactoring code leading to new bugs.Once your tests are passing is safer to refactor. 
 
 I also tested all possible  ``` IOExceptions   ```   that could be thrown from the from the ```WordCounter``` class functions. 
 If an non-existing file or invalid directory is passed into the ```WordCounter``` an IOException is thrown. To test this I simply passed  an invalid directory for test 13 and a non-existing file for test 14 , as seen below.
@@ -89,13 +89,29 @@ If an non-existing file or invalid directory is passed into the ```WordCounter``
     }
 
 
-Further testing can be done in this scenario, an ``` IOExceptions   ``` is thrown but a message is also given to the user
+Further testing can be done in this scenario, an ``` IOExceptions   ``` is thrown but a message is also given to the user.
 
 
-``` demoCount(); ```
+```  The following directory 
+ C:\Users\Conor\workspace\Bina_Test\Binnaaa\ThisDoesNotExist.txt 
+ Does not contain the file:  ThisDoesNotExist.txt
+ ```
 
 
+ Even though the exception is thrown and the message is printed I tested to see if a file or directory exists as seen below
+ ```
+    @Test
+    public void wordCounter_NullFile_Check () {
+    WordCounter Book1 = new WordCounter(thisDoesntExist_FilePath);
+    Path file_Path = Paths.get(Book1.getPathName().toString());
 
+    boolean actualResult = Files.exists(file_Path);
+    assertEquals(false,actualResult);
+    }     
+    
+ ``` 
+ 
+ 
 
 
 ## Why you think your testing is sufficient for your code to be merged?
