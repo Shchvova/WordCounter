@@ -89,10 +89,10 @@ If an non-existing file or invalid directory is passed into the ```WordCounter``
     }
 
 
-Further testing can be done in this scenario, an ``` IOExceptions   ``` is thrown but I also printed a message for the user.
+Further testing can be done in this scenario, an ``` IOExceptions   ``` is thrown but a message is also given to the user
 
 
-
+``` demoCount(); ```
 
 
 
