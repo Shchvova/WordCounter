@@ -1,10 +1,10 @@
 # Bina Word Counter Tests
 
-This program counts the number of words within a file
+This program counts the number of words in a text file.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -18,11 +18,6 @@ You will need the following files and folders in your workspace to ensure all te
 * Zero_Words.txt
 * DifferentDirectory.txt
 * DifferentDirectory\ 
-
-
-```
-Give examples
-```
 
 ### Installing
 
@@ -81,7 +76,18 @@ Each test case had a set of attributes, forcing me to think about each test woul
 
 As I wrote the  ``` WordCounter  ```  class I would write tests to validate any point in the code where I could use an ```Assert Method```  to validate an expected output.  So I'd write the test then focus soley on that test until it passed, breaking the program into smaller junks rather than one whole application. I could then incrementally build on passing tests  instead of constantly refactoring code leading to new bugs.Once your tests are passing is safer to refactor.
 
-I also tested all possible  ``` Exceptions  ```   that could be thrown from the from the ```WordCounter``` class functions. 
+I also tested all possible  ``` IOExceptions   ```   that could be thrown from the from the ```WordCounter``` class functions. 
+If an non-existing file or invalid directory is passed into the ```WordCounter``` an IOException is thrown. To test this I simply passed  an invalid directory for test 13 and a non-existing file for test 14 , as seen below.
+
+
+    @Test(expected=NullPointerException.class,timeout = 2500)
+    public void wordCounter_Exception_Invalid_Directory() 
+    {
+    	WordCounter Book1 = new WordCounter(A_Non_Existed_Directory);
+    	Book1.countWords();
+    	
+    }
+
 
 
 ## Why you think your testing is sufficient for your code to be merged?
