@@ -69,8 +69,7 @@ Give an example
 ## Comment on additional testing you would consider beyond this JUnit test suite after your code is merged
 
 ## Include the time you spent on the entire exercise 
-*9-10 Hours(this includes research and planning)
-
+* 9-10 Hours(this includes research and planning)
 
 ## Built With
 
