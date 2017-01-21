@@ -27,8 +27,6 @@ Give examples
 
 ### Installing
 
-To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
-You can also see the program running in the main, by running the method ``` demoCount(); ```
 Your workspace should contain the project ``` Bina_Test```  like mine below
 
 ```
@@ -45,7 +43,8 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
+You can also see the program running in the main, by running the method ``` demoCount(); ```
 
 ### Break down into end to end tests
 
