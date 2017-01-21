@@ -18,7 +18,7 @@ You will need the following files and folders in your workspace to ensure all te
 * Seven_Words.txt
 * Zero_Words.txt
 * DifferentDirectory.txt
-* DifferentDirectory\ (Folder)
+* DifferentDirectory\ DifferentDirectory.txt
 
 
 ```
@@ -27,9 +27,8 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
+You can also see the program running in the main, by running the method ``` demoCount(); ```
 
 ```
 C:\Users\Conor\workspace\Bina_Test\foreignText.txt
