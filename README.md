@@ -29,15 +29,16 @@ Give examples
 
 To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
 You can also see the program running in the main, by running the method ``` demoCount(); ```
+Your workspace should contain the project ``` Bina_Test```  like mine below
 
 ```
-C:\Users\Conor\workspace\Bina_Test\foreignText.txt
+C:\Users\Conor\workspace\Bina_Test
 ```
 
 I can only test the directories for windows 
 
 ```
-C:\Users\YOURUSERNAME\workspace\Bina_Test\foreignText.txt
+C:\Users\YOURUSERNAME\workspace\Bina_Test
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
