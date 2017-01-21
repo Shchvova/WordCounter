@@ -56,7 +56,7 @@ Explain what these tests test and why
 Give an example
 ```
 ## Why you tested your word counter the way you did?
-To test the  ``` WordCounter  ``` class I need a unit test that can test each of its public methods to ensure all the all the code works as it is intended to work. With my approach, I wrote the automated  tests as I wrote the program, as opposed to writing the tests after developing the program. This helped me define the acceptance criteria and allowed me to validate my code as I wrote it.This is my first time using JUnit in a professional context so I would apprciate  feedback on my approach.
+To test the  ``` WordCounter  ``` class , all of its methods must be test to ensure all the all the code works as intended. With my approach, I wrote the Junit tests as I wrote the program, as opposed to writing the tests after developing the program. This helped me define the acceptance criteria and allowed me to validate my code as I wrote it.This is my first time using JUnit in a professional context so I would apprciate  feedback on my approach, I'm not afraid of making mistakes because thats how you learn.
 
 My workflow was as follows:
 * Add a test
@@ -87,6 +87,14 @@ If an non-existing file or invalid directory is passed into the ```WordCounter``
     	Book1.countWords();
     	
     }
+
+
+Further testing can be done in this scenario, an ``` IOExceptions   ``` is thrown but I also printed a message for the user.
+
+
+
+
+
 
 
 
