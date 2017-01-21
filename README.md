@@ -81,13 +81,8 @@ Each test case had a set of attributes, forcing me to think about each test woul
 
 As I wrote the  ``` WordCounter  ```  class I would write tests to validate any point in the code where I could use an ```Assert Method```  to validate an expected output.  So I'd write the test then focus soley on that test until it passed, breaking the program into smaller junks rather than one whole application. I could then incrementally build on passing tests  instead of constantly refactoring code leading to new bugs.Once your tests are passing is safer to refactor.
 
-So once I had covered all possible expected outputs I test all possible  ``` Exceptions  ```  that could be thrown. 
+I also tested all possible  ``` Exceptions  ```   that could be thrown from the from the ```WordCounter``` class functions. 
 
-
-. You'll write one failing test, and focus solely on that to get it passing. It forces you to think about smaller chunks of functionality at a time rather than the application as a whole, and you can then incrementally build on a passing test, rather than trying to tackle the bigger picture from the get-go, which will probably result in more bugs, and therefore a longer development time
-
-
-automated testing can help isolate the effects of your changes so that you know that it doesn't break the rest of that particular piece of code.
 
 ## Why you think your testing is sufficient for your code to be merged?
 To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
