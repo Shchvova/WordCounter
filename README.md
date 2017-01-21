@@ -98,7 +98,7 @@ Further testing can be done in this scenario, an ``` IOExceptions   ``` is throw
  ```
 
 
- Even though the exception is thrown and the message is printed I tested to see if a file or directory exists as seen below
+
 
  
  
