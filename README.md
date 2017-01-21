@@ -12,13 +12,12 @@ You will need the following files and folders in your workspace to ensure all te
 * foreignText.txt
 * Numerics.txt
 * punctuationOnly.txt
-* russianText.txt
 * punctuationWords.txt
 * foreignText.txt
 * Seven_Words.txt
 * Zero_Words.txt
 * DifferentDirectory.txt
-* DifferentDirectory\ DifferentDirectory.txt
+* DifferentDirectory\ 
 
 
 ```
@@ -39,7 +38,7 @@ I can only test the directories for windows
 C:\Users\YOURUSERNAME\workspace\Bina_Test
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+
 
 ## Running the tests
 
@@ -62,10 +61,16 @@ Explain what these tests test and why
 Give an example
 ```
 ## Why you tested your word counter the way you did?
+To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
+You can also see the program running in the main, by running the method ``` demoCount(); ```
 
 ## Why you think your testing is sufficient for your code to be merged?
+To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
+You can also see the program running in the main, by running the method ``` demoCount(); ```
 
 ## Comment on additional testing you would consider beyond this JUnit test suite after your code is merged
+To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
+You can also see the program running in the main, by running the method ``` demoCount(); ```
 
 ## Include the time you spent on the entire exercise 
 * 9-10 Hours(this includes research and planning)
