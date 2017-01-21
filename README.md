@@ -45,7 +45,7 @@ C:\Users\YOURUSERNAME\workspace\Bina_Test
 To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
 You can also see the program running in the main, by running the method ``` demoCount(); ```
 
-### Break down into end to end tests
+### H
 
 Explain what these tests test and why
 
@@ -61,8 +61,17 @@ Explain what these tests test and why
 Give an example
 ```
 ## Why you tested your word counter the way you did?
-To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
-You can also see the program running in the main, by running the method ``` demoCount(); ```
+To test the  ``` WordCounter  ``` class I need a unit test that can test each of its public methods to ensure all the all the code works as it is intended to work. With my approach, I wrote the automated  tests as I wrote the program, as opposed to writing the tests after developing the program. This helped me define the acceptance criteria and allowed me to focus on the flow of the program.
+
+My workflow was as follows:
+* Add a test
+* Run all tests and see if the new one fails
+* Write some code
+* Run tests
+* Refactor code
+* Repeat
+
+Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that tes
 
 ## Why you think your testing is sufficient for your code to be merged?
 To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
