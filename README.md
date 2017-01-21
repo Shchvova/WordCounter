@@ -99,17 +99,7 @@ Further testing can be done in this scenario, an ``` IOExceptions   ``` is throw
 
 
  Even though the exception is thrown and the message is printed I tested to see if a file or directory exists as seen below
- ```
-    @Test
-    public void wordCounter_NullFile_Check () {
-    WordCounter Book1 = new WordCounter(thisDoesntExist_FilePath);
-    Path file_Path = Paths.get(Book1.getPathName().toString());
 
-    boolean actualResult = Files.exists(file_Path);
-    assertEquals(false,actualResult);
-    }     
-    
- ``` 
  
  
 
