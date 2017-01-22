@@ -120,19 +120,9 @@ No Idea
 ## Comment on additional testing you would consider beyond this JUnit test suite after your code is merged
 While unit test cases are great for throughly testing each line of code, further testing is necessary.
 
-* System Testing
+### System Testing
 
 To ensure the application runs efficently on a system level tests such as stress,performance, security and recovery tests must pass. So the entire application end-to-end is tested.
-
-* User Acceptance Test Case
-
-
-Real world scenarios must be tested , with real users. So user acceptance testing must pass. 
-
-
-* Servlet Testing?
-
-?
 
 ## Include the time you spent on the entire exercise 
 * 9-10 Hours(this includes research and planning)
