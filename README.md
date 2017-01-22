@@ -121,11 +121,14 @@ No Idea
 While unit test cases are great for throughly testing each line of code, further testing is necessary.
 
 * System Testing
+
 To ensure the application runs efficently on a system level tests such as stress,performance, security and recovery tests must pass. So the entire application end-to-end is tested.
 
 * User Acceptance Test Case
 
+
 Real world scenarios must be tested , with real users. So user acceptance testing must pass. 
+
 
 * Servlet Testing?
 
