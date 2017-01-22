@@ -10,6 +10,7 @@ import java.io.RandomAccessFile;
 import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 import java.nio.channels.OverlappingFileLockException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -32,7 +33,8 @@ public class ReadingFileTests {
 
 	/* 
 	*  Test ID: 13
-	*  Description : Test the "countWords()" function. To test and see if an exception is thrown when a file that doesn't exist is given to the "WordCounter(final String filePath)" Constructor
+	*  Description : Test the "countWords()" function. To test and see if an exception is thrown when 
+	*  a file that doesn't exist is given to the "WordCounter(final String filePath)" constructor.
 	* 	
 	*  Prerequisites : A directory that doesn't have the specified file
 	*  Expected Output : fileDictory+"Bina_Test\\7Words.txt"
@@ -59,7 +61,51 @@ public class ReadingFileTests {
     @Test(expected=NullPointerException.class,timeout = 2500)
     public void wordCounter_Exception_Invalid_Directory() 
     {
-    	WordCounter WC = new WordCounter(A_Non_Existed_Directory);
-		WC.countWords();
+    	WordCounter Book1 = new WordCounter(A_Non_Existed_Directory);
+    	Book1.countWords();
+    	
     }
+    
+	/* 
+	*  Test ID: 15
+	*  Description : Test the "setPathName()" function. 
+	*  When a non-existed file is passed into the "WordCounter" constructor the method should print out that the specified directory doesn't contain the specified file.
+	*  The file doesn't exist so we're expecting false
+	*  Prerequisites : An invalid directory such as Binaa_Test\\7words.txt" instead of  Bina_Test\\7words.txt
+	*  Expected Output : False
+	*  Actual : False
+	*  Status : Pass
+	*/
+    
+    @Test
+    public void wordCounter_NullFile_Check () {
+    	WordCounter Book1 = new WordCounter(thisDoesntExist_FilePath);
+    	Path file_Path = Paths.get(Book1.getPathName().toString());
+    	
+    	boolean actualResult = Files.exists(file_Path);
+        assertEquals(false,actualResult);
+    }
+    
+	/* 
+	*  Test ID: 16
+	*  Description : Test the "setPathName()" function. 
+	*  When a invalid directory is passed into the "WordCounter" constructor the method should print out that the specified directory doesn't contain the specified file.
+	*  The file doesn't exist so we're expecting false
+	*  Prerequisites : An invalid directory such as Binaa_Test\\7words.txt" instead of  Bina_Test\\7words.txt
+	*  Expected Output : False
+	*  Actual : False
+	*  Status : Pass
+	*/
+    
+    @Test
+    public void wordCounter_InvalidDirectory_Check () {
+    	WordCounter Book1 = new WordCounter(A_Non_Existed_Directory);
+    	
+    	Path file_Path = Paths.get(Book1.getPathName().toString());
+    	boolean actualResult = Files.exists(file_Path);
+    	
+ 
+        assertEquals(false,actualResult);
+    }
+      
 }

@@ -18,6 +18,7 @@ public class WordCounter
 	private int count=0;
 	private String file;
 	private Path file_Path;
+	private boolean doesDirectoryExist = false;
 
 	public WordCounter() // Default Constructor
 	{
@@ -79,17 +80,11 @@ public class WordCounter
 		return word.length() == pos.getIndex(); 
 	}	
 
-	public void closeFile(BufferedReader fileToClose)
+	public void closeFile(BufferedReader fileToClose) throws IOException
 	{
-		try 
-		{
-			fileToClose.close();		
-		} 
-		catch (IOException e)
-		{	
-			e.printStackTrace();
-			System.out.println("File wasn't Closed");
-		}
+
+		fileToClose.close();		
+
 	}
 	
 	public boolean isValidWord(String word) //Checks if the word is a valid word, for all languages 
@@ -137,10 +132,12 @@ public class WordCounter
 
 		if (Files.exists(file_Path)==true ) 
 		{
+			
 			file = file_Path.getFileName().toString(); 
 		}
 		else
 		{	
+			
 			System.out.println("\n The following directory \n "+file_Path+" \n Does not contain the file: " +" "+file_Path.getFileName().toString());
 		}
 	}
