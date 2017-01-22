@@ -37,7 +37,7 @@ C:\Users\YOURUSERNAME\workspace\Bina_Test
 
 ## Running the tests
 
-To run the tests, run the ```  TestSuite  ``` and all 16 tests should run and pass
+To run the tests, run the ```  TestSuite  ``` and all 16 tests should run and pass. I used a test  test suite which would make it easier to upgrade the framework.
 You can also see the program running in the main, by running the method ``` demoCount(); ```
 
 ### H
@@ -66,7 +66,7 @@ My workflow was as follows:
 * Refactor code
 * Repeat
 
-Each test case had a set of attributes, forcing me to think about each test would work as I wrote it.
+Each test case had the following format with  a set of attributes, forcing me to think about each test would work as I wrote it.
 *  Test ID: 
 *  Description : 
 *  Prerequisites : 
@@ -118,8 +118,18 @@ Further testing can be done in this scenario, an ``` IOExceptions   ``` is throw
 No Idea
 
 ## Comment on additional testing you would consider beyond this JUnit test suite after your code is merged
-To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
-You can also see the program running in the main, by running the method ``` demoCount(); ```
+While unit test cases are great for throughly testing each line of code, further testing is necessary.
+
+* System Testing
+To ensure the application runs efficently on a system level tests such as stress,performance, security and recovery tests must pass. So the entire application end-to-end is tested.
+
+* User Acceptance Test Case
+
+Real world scenarios must be tested , with real users. So user acceptance testing must pass. 
+
+* Servlet Testing?
+
+?
 
 ## Include the time you spent on the entire exercise 
 * 9-10 Hours(this includes research and planning)
