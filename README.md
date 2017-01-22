@@ -37,7 +37,7 @@ C:\Users\YOURUSERNAME\workspace\Bina_Test
 
 ## Running the tests
 
-To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
+To run the tests, run the ```  TestSuite  ``` and all 16 tests should run and pass
 You can also see the program running in the main, by running the method ``` demoCount(); ```
 
 ### H
@@ -56,7 +56,7 @@ Explain what these tests test and why
 Give an example
 ```
 ## Why you tested your word counter the way you did?
-To test the  ``` WordCounter  ``` class , all of its methods must be test to ensure all the all the code works as intended. With my approach, I wrote the Junit tests as I wrote the program, as opposed to writing the tests after developing the program. This helped me define the acceptance criteria and allowed me to validate my code as I wrote it.This is my first time using JUnit in a professional context so I would apprciate  feedback on my approach, I'm not afraid of making mistakes because thats how you learn.
+To test the  ``` WordCounter  ``` class , all of its methods must be tested to ensure all the all the code works as intended. With my approach, I wrote the Junit tests as I wrote the program, as opposed to writing the tests after developing the program. This helped me define the acceptance criteria and allowed me to validate my code as I wrote it.This is my first time using JUnit in a professional context so I would apprciate  feedback on my approach, I'm not afraid of making mistakes because thats how you learn.
 
 My workflow was as follows:
 * Add a test
@@ -74,12 +74,12 @@ Each test case had a set of attributes, forcing me to think about each test woul
 *  Actual : 
 *  Status :
 
-As I wrote the  ``` WordCounter  ```  class I would write tests to validate any point in the code where I could use an ```Assert Method```  to validate an expected output.  So I'd write the test then focus soley on that test until it passed, breaking the program into smaller junks rather than one whole application. I could then incrementally build on passing tests  instead of constantly refactoring code leading to new bugs.Once your tests are passing is safer to refactor. 
+As I wrote the  ``` WordCounter  ```  class I wrote tests in parallel to validate any point in the code where I could use an ```assertEquals Method```  to validate an expected output.  So I'd write the test then focus soley on that test until it passed, breaking the program into smaller junks rather than one whole application. I could then incrementally build on passing tests  instead of constantly refactoring code, which could introduce  new bugs.Once my tests were passing it was safer to refactor. When testing the word counting functionality I tried to vary the testing scenarios. I would include words with varying punctuation.I also tried to include double UTF-8 characters in some of the text files like so ```??``` , to ensure the counter skipped such characters. 
 
 I also tested all possible  ``` IOExceptions   ```   that could be thrown from the from the ```WordCounter``` class functions. 
 If an non-existing file or invalid directory is passed into the ```WordCounter``` an IOException is thrown. To test this I simply passed  an invalid directory for test 13 and a non-existing file for test 14 , as seen below.
 
-
+```
     @Test(expected=NullPointerException.class,timeout = 2500)
     public void wordCounter_Exception_Invalid_Directory() 
     {
@@ -87,19 +87,35 @@ If an non-existing file or invalid directory is passed into the ```WordCounter``
     	Book1.countWords();
     	
     }
+```
+
+Further testing can be done in this scenario, an ``` IOExceptions   ``` is thrown if the file is invalid but a message is also given to the user.
+
+```
+ The following directory 
+ C:\Users\Conor\workspace\Bina_Test\Binnaaa\ThisDoesNotExist.txt 
+ Does not contain the file:  ThisDoesNotExist.txt
 
 
-Further testing can be done in this scenario, an ``` IOExceptions   ``` is thrown but a message is also given to the user.
+```
 
-
-
-
+ Even though the exception is thrown and the message is printed I tested to see if a file or directory exists as seen below.
  
-
+ ```
+ 
+    @Test
+    public void wordCounter_NullFile_Check () {
+    WordCounter Book1 = new WordCounter(thisDoesntExist_FilePath);
+    Path file_Path = Paths.get(Book1.getPathName().toString());
+    	
+    boolean actualResult = Files.exists(file_Path);
+    assertEquals(false,actualResult);
+    }
+ 
+```
 
 ## Why you think your testing is sufficient for your code to be merged?
-To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
-You can also see the program running in the main, by running the method ``` demoCount(); ```
+No Idea
 
 ## Comment on additional testing you would consider beyond this JUnit test suite after your code is merged
 To run the tests, run the ```  TestSuite  ``` and all 14 tests should run and pass
