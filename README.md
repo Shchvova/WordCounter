@@ -40,9 +40,9 @@ C:\Users\YOURUSERNAME\workspace\Bina_Test
 To run the tests, run the ```  TestSuite  ``` and all 16 tests should run and pass. I used a test  test suite which would make it easier to upgrade the framework.
 You can also see the program running in the main, by running the method ``` demoCount(); ```
 
-### H
+### Test Cases
 
-Explain what these tests test and why
+Should I have a description of each test case here? @Vlad
 
 ```
 Give an example
@@ -50,7 +50,7 @@ Give an example
 
 ### And coding style tests
 
-Explain what these tests test and why
+What style did I use?  @Vlad
 
 ```
 Give an example
@@ -115,23 +115,23 @@ Further testing can be done in this scenario, an ``` IOExceptions   ``` is throw
 ```
 
 ## Why you think your testing is sufficient for your code to be merged?
-No Idea
+No Idea @Vlad
 
 ## Comment on additional testing you would consider beyond this JUnit test suite after your code is merged
 While unit test cases are great for throughly testing each line of code, further testing is necessary.
 
-### System Testing
+### User Acceptance 
 
-To ensure the application runs efficently on a system level tests such as stress,performance, security and recovery tests must pass. So the entire application end-to-end is tested.
-
-### System Testing
-
-To ensure the application runs efficently on a system level tests such as stress,performance, security and recovery tests must pass. So the entire application end-to-end is tested.
-
+Real world scenarios must be tested , with real users. So user acceptance testing must pass.
 
 ### System Testing
 
 To ensure the application runs efficently on a system level tests such as stress,performance, security and recovery tests must pass. So the entire application end-to-end is tested.
+
+
+### Servlet Testing?
+
+?
 
 
 
